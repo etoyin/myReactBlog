@@ -25,9 +25,10 @@ class BlogPosts extends React.Component {
 	render(){
 		let postList = this.state.posts.map((post, i) => {
 			return (
-				<div key={i}>
+				<div className="exceptImage" key={i}>
+					<img src={post.featured_image}/>
 					<h2>{post.slug}</h2>
-					<p dangerouslySetInnerHTML={{__html: post.meta._et_pb_old_content}}/>
+					
 				</div>
 			)
 		});

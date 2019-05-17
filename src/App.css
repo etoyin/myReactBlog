@@ -1,20 +1,21 @@
 img {
-  height: 100px;
-  width: 70px;
+  height: 14em;
+  width: 100%;
 }
 .flexcontainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  //background-color: DodgerBlue;
+  
 }
 .flexcontainer>div{
   background-color: #f1f1f1;
   width: 20em;
+  height: 20em;
   margin: 10px;
   text-align: center;
-  line-height: 75px;
-  font-size: 30px;
+  line-height: ;
+  font-size: ;
 }
 
 @keyframes App-logo-spin {

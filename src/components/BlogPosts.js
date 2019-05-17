@@ -27,7 +27,7 @@ class BlogPosts extends React.Component {
 			return (
 				<div className="exceptImage" key={i}>
 					<img src={post.featured_image}/>
-					<h5>{post.slug}</h5>
+					<p dangerouslySetInnerHTML={{__html: post.slug}}/>
 					
 				</div>
 			)

@@ -27,16 +27,18 @@ class BlogPosts extends React.Component {
 			return (
 				<div className="exceptImage" key={i}>
 					<img src={post.featured_image}/>
-					<h2>{post.slug}</h2>
+					<h5>{post.slug}</h5>
 					
 				</div>
 			)
 		});
 
 		return (
-			<div>
+			<div className="container">
 				<h1>My Posts</h1>
-   				{postList}
+				<div className="flexcontainer">
+					{postList}
+				</div>				
 			</div>
 		)
 

@@ -6,7 +6,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  
+
 }
 .flexcontainer>div{
   background-color: #f1f1f1;
@@ -16,6 +16,16 @@ img {
   text-align: center;
   line-height: ;
   font-size: ;
+  //border: 1px solid #707070;
+  border-radius: 5px;
+  box-shadow: 4px 4px 4px 3px #aaa;
+}
+.flexcontainer>div:hover{
+  //background-color: black;
+  //width: 21em;
+  //height: 21em;
+  opacity: 0.5;
+  cursor: pointer;
 }
 
 @keyframes App-logo-spin {

@@ -1,4 +1,5 @@
 //import React from 'react';
+import { Link } from 'react-router-dom';
 import React, {Component} from 'react';
 import { Pagination } from 'react-bootstrap';
 //import {getData} from './GetData'
@@ -12,6 +13,7 @@ class BlogPosts extends React.Component {
     	}
   	}
 
+    //handleClick();
 
   	componentDidMount() {
 	  	let dataUrl = 'http://epower.ng/wp-json/wp/v2/posts';
@@ -27,10 +29,13 @@ class BlogPosts extends React.Component {
 	render(){
 		let postList = this.state.posts.map((post, i) => {
 			return (
-				<div className="exceptImage" key={i}>
-					<img src={post.featured_image}/>
-					<p dangerouslySetInnerHTML={{__html: post.slug}}/>
-
+				<div onClick={()=>alert(post.slug)} className="exceptImage" key={i}>
+          <Link to={{
+            pathname: '/'+post.slug
+          }}>
+            <img src={post.featured_image}/>
+  					<p dangerouslySetInnerHTML={{__html: post.slug}}/>
+          </Link>
 				</div>
 			)
 		});

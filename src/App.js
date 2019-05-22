@@ -1,12 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
+import {Switch, Route} from 'react-router-dom';
+//import {Link} from 'react-router-dom';
 import './App.css';
-import BlogPosts from './components/BlogPosts'
+import BlogPosts from './components/BlogPosts';
+import Details from './components/Details'
 
 function App() {
   return (
     <div className="App">
-      <BlogPosts/>
+      <React.Fragment>
+        <Switch>
+          <Route exact path="/" component={BlogPosts}/>
+          <Route path="/:handle" component={Details}/>
+        </Switch>
+      </React.Fragment>
     </div>
   );
 }

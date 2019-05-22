@@ -29,12 +29,12 @@ class BlogPosts extends React.Component {
 	render(){
 		let postList = this.state.posts.map((post, i) => {
 			return (
-				<div onClick={()=>alert(post.slug)} className="exceptImage" key={i}>
+				<div className="exceptImage" key={i}>
           <Link to={{
             pathname: '/'+post.slug
           }}>
-            <img src={post.featured_image}/>
-  					<p dangerouslySetInnerHTML={{__html: post.slug}}/>
+            <img className="BlogPostImg" src={post.featured_image}/>
+  					<p dangerouslySetInnerHTML={{__html: post.slug.split("-").join(" ")}}/>
           </Link>
 				</div>
 			)

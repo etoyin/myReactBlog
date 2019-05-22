@@ -1,6 +1,33 @@
-img {
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+*{
+  font-family: 'Roboto', sans-serif;
+}
+.container{
+  text-align: center;
+}
+.BlogPostImg {
   height: 14em;
   width: 100%;
+  
+}
+p {
+  text-indent: 50px;
+  letter-spacing: 3px;
+}
+.paraDiv{
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+a {
+  text-decoration: none;
+  color: #008CBA;
+}
+img{
+  height: 14em;
+  width: 50%;
+  
 }
 .flexcontainer {
   display: flex;
@@ -16,16 +43,30 @@ img {
   text-align: center;
   line-height: ;
   font-size: ;
-  //border: 1px solid #707070;
   border-radius: 5px;
   box-shadow: 4px 4px 4px 3px #aaa;
 }
-.flexcontainer>div:hover{
+.flexcontainer > div:hover{
   //background-color: black;
   //width: 21em;
   //height: 21em;
   opacity: 0.5;
   cursor: pointer;
+}
+.detailsImg{
+  width: 50%;
+  height: 15em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 5%;
+}
+.details{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(204, 204, 206);
+  text-align: center;
 }
 
 @keyframes App-logo-spin {

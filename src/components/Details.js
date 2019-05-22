@@ -27,21 +27,52 @@ class Details extends React.Component {
 
 
   render(){
-    let postList = this.state.posts.filter((post, i)=>{
-      return post.slug == this.state.handle;
-    })
+
+    let postList = this.state.posts.map((post, i) => {
+      if (post.slug === this.state.handle){
+        return (
+          <div className="details" key={i}>
+            <img className="detailsImg" src={post.featured_image}/>
+            <br/>
+            <div className="paraDiv">
+            <p dangerouslySetInnerHTML={{__html: post.meta._et_pb_old_content}}/>
+            </div>
+            
+          </div>
+        )
+      }
+    });
+    let header = this.state.handle.split("-").join(" ");
+
+    /*
+    let postList = this.state.posts.filter((post)=>{
+      return post.slug === this.state.handle;
+    });
 
     return (
+      
       <div className="container">
-				<h1>My Posts</h1>
-				<div className="flexcontainer">
-          <div className="exceptImage">
-            <img src={postList.featured_image}/>
+				<h1>{postList.slug}</h1>
+				<div className="">
+          <div className="">
+            <img src="" alt="Hello"/>
+            {console.log(this.state.posts.id)}
+            {console.log(this.state.handle)}
+            {console.log(postList[0])}
             <p dangerouslySetInnerHTML={{__html: postList.slug}}/>
         </div>
 				</div>
       </div>
-    )
+    )*/
+
+    return (
+			<div className="container">
+				<h1>{header.charAt(0).toUpperCase() + header.slice(1)}</h1>
+				<div className="">
+					{postList}
+				</div>
+			</div>
+		)
   }
 }
 

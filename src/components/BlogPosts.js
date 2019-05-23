@@ -28,13 +28,14 @@ class BlogPosts extends React.Component {
 
 	render(){
 		let postList = this.state.posts.map((post, i) => {
+			let title = post.slug.split("-").join(" ");
 			return (
 				<div className="exceptImage" key={i}>
           <Link to={{
             pathname: '/'+post.slug
           }}>
             <img className="BlogPostImg" src={post.featured_image}/>
-  					<p dangerouslySetInnerHTML={{__html: post.slug.split("-").join(" ")}}/>
+  					<p dangerouslySetInnerHTML={{__html: title.charAt(0).toUpperCase() + title.slice(1)}}/>
           </Link>
 				</div>
 			)
